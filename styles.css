@@ -136,3 +136,14 @@ button.color:hover {
     color: #eeeeee;
     font-size: 13pt;
 }
+
+@media all and (max-device-width: 480px) {
+    #grid-container {
+        width: 600px;
+        height: 600px;
+    }
+
+    #left-sidebar {
+        width: 1vh;
+    }
+}
