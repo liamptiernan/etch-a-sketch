@@ -1,6 +1,17 @@
 body {
     margin: 0;
     font-family: helvetica, arial, sans-serif;
+    background-color: #fcfcfc;
+    min-width: 120vh;
+}
+
+button {
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    background: #d6d6d6;
+    font-weight: 300;
+    transition: ease-in .1s;
 }
 
 /* HEADER ITEMS */
@@ -19,15 +30,59 @@ body {
     margin: 15px 0px 5px 0px;
 }
 
-#reset {
-    border: none;
-    border-radius: 2px;
-    padding: 5px 10px;
-    background: #b1b1b1;
-    font-weight: 300;
+/* BODY ITEMS */
+
+#main-container {
+    display: flex;
+    justify-content: center;
 }
 
-/* BODY ITEMS */
+#right-sidebar {
+    width: 5vh;
+    flex-grow: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto
+}
+
+.color {
+    font-weight: 500;
+    font-size: 12pt;
+    color: #ffffff;
+    margin: 15px;
+    width: 45%;
+    min-width: 65px;
+    height: 30px;
+    justify-items: center;
+}
+
+#red {
+    background-color: #d16a6a;
+}
+
+#blue {
+    background-color: #6388d8;
+}
+
+#green {
+    background-color: #71c784;
+}
+
+#black {
+    background-color: #000;
+}
+
+#left-sidebar {
+    flex-grow: 1;
+    width: 5vh;
+}
 
 .square {
     background: #eeeeee;
@@ -40,11 +95,44 @@ body {
 
 #grid-container {
     display: grid;
-    height: 725px;
-    width: 725px;
+    height: 90vh;
+    width: 90vh;
     margin: auto;
 }
 
 .hover {
     background: black;
+}
+
+#red.active {
+    /* border: 2px solid rgba(116, 116, 116, 0.651); */
+    justify-items: center;
+    background: repeating-linear-gradient(#d16a6a,rgb(165, 97, 97))
+}
+
+#black.active {
+    /* border: 2px solid rgba(116, 116, 116, 0.651); */
+    justify-items: center;
+    background: repeating-linear-gradient(#000,#383838)
+}
+
+#blue.active {
+    /* border: 2px solid rgba(116, 116, 116, 0.651); */
+    justify-items: center;
+    background: repeating-linear-gradient(#6388d8,#5373b8)
+}
+
+#green.active {
+    /* border: 2px solid rgba(116, 116, 116, 0.651); */
+    justify-items: center;
+    background: repeating-linear-gradient(#71c784,#549662)
+}
+
+button:focus {
+    outline: 1px solid #cccccc;
+}
+
+button.color:hover {
+    color: #eeeeee;
+    font-size: 13pt;
 }
